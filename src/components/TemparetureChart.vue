@@ -10,6 +10,7 @@
 <script>
 import { Chart } from "chart.js/auto";
 import TempChartData from "../tempChart";
+
 export default {
   name: "TemparetureChart",
   data() {
