@@ -1,7 +1,9 @@
 <template>
+  <h1>Smart green campus</h1>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Temperature</router-link> |
+    <router-link to="/about">Humidity</router-link> |
+    <router-link to="">Lux</router-link>
   </nav>
   <router-view />
 </template>
