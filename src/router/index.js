@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-import TemparetureChartView from "../views/TemparetureChartView.vue";
+//import TemparetureChartView from "../views/TemparetureChartView.vue";
 //import GStore from "@/store";
 //import tempChartService from "@/tempChartService";
+import HomeView from "../views/HomeView.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: TemparetureChartView,
+    component: HomeView,
   },
   {
     path: "/humidity",

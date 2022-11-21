@@ -1,6 +1,7 @@
 <template>
   <h1><router-link class="header" to="/">SMART GREEN CAMPUS</router-link></h1>
   <nav>
+    <router-link to="/">Home</router-link> |
     <router-link to="/temperature">Temperature</router-link> |
     <router-link to="/humidity">Humidity</router-link> |
     <router-link to="/lux">Lux</router-link>
