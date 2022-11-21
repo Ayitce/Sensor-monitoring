@@ -1,5 +1,5 @@
 <template>
-  <h1>Tempareture Chart</h1>
+  <h1>Lux Chart</h1>
   <div style="width: 1200px">
     <canvas id="graphCanvas" ref="domRef"></canvas>
   </div>
@@ -9,7 +9,6 @@
 
 <script>
 import { Chart } from "chart.js/auto";
-import tempChartService from "@/tempChartService.js";
 //console.log(tempChartService.getChartData());
 import { ref, child, get } from "firebase/database";
 import firebaseApp from "@/firebaseApp";
@@ -17,10 +16,10 @@ import firebaseApp from "@/firebaseApp";
 const dbRef = ref(firebaseApp);
 
 export default {
-  name: "TemparetureChart",
+  name: "LuxChart",
   mounted() {
     var valueArray;
-    var temperature = [];
+    var lux = [];
     var time = [];
 
     var myPromise = new Promise(function (resolve) {
@@ -33,8 +32,8 @@ export default {
           for (var key in valueArray) {
             var obj = valueArray[key];
             for (var prop in obj) {
-              if (prop === "temperature") {
-                temperature.push(obj[prop]);
+              if (prop === "lux") {
+                lux.push(obj[prop]);
               }
               if (prop === "time") {
                 time.push(obj[prop]);
@@ -43,16 +42,16 @@ export default {
           }
           var flag = true;
           while (flag) {
-            if (temperature.length > 36) {
-              temperature.shift();
+            if (lux.length > 36) {
+              lux.shift();
               time.shift();
             } else {
               flag = false;
             }
           }
-          console.log(temperature);
+          console.log(lux);
           console.log(time);
-          resolve({ temperature: temperature, time: time });
+          resolve({ lux: lux, time: time });
         }
       });
     });
@@ -65,8 +64,8 @@ export default {
           labels: value.time,
           datasets: [
             {
-              label: "Temperature in test room",
-              data: value.temperature,
+              label: "lux in test room",
+              data: value.lux,
               backgroundColor: "rgba(71, 183,132,.5)",
               borderColor: "#47b784",
               borderWidth: 3,
