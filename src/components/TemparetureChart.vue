@@ -41,7 +41,17 @@ export default {
               }
             }
           }
+          var flag = true;
+          while (flag) {
+            if (humidity.length > 36) {
+              humidity.shift();
+              time.shift();
+            } else {
+              flag = false;
+            }
+          }
           console.log(humidity);
+          console.log(time);
           resolve({ humidity: humidity, time: time });
         }
       });
