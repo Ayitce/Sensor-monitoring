@@ -83,4 +83,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+#graphCanvas {
+  position: absolute;
+  margin: auto;
+}
+</style>

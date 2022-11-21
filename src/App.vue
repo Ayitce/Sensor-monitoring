@@ -1,9 +1,9 @@
 <template>
-  <h1>Smart green campus</h1>
+  <h1><router-link class="header" to="/">SMART GREEN CAMPUS</router-link></h1>
   <nav>
-    <router-link to="/">Temperature</router-link> |
-    <router-link to="/about">Humidity</router-link> |
-    <router-link to="">Lux</router-link>
+    <router-link to="/temperature">Temperature</router-link> |
+    <router-link to="/humidity">Humidity</router-link> |
+    <router-link to="/lux">Lux</router-link>
   </nav>
   <router-view />
 </template>
@@ -15,6 +15,16 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.header {
+  color: #42b983;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header:hover {
+  color: #78dcaf;
 }
 
 nav {
