@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import TemparetureChartView from "../views/TemparetureChartView.vue";
+//import GStore from "@/store";
+//import tempChartService from "@/tempChartService";
 
 const routes = [
   {

@@ -1,24 +1,10 @@
-<template>
-  <h1>Tempareture Chart</h1>
-  <div style="width: 1500px">
-    <canvas id="graphCanvas" ref="domRef"></canvas>
-  </div>
-</template>
-
-<script></script>
-
-<script>
-import { Chart } from "chart.js/auto";
-import tempChartService from "@/tempChartService.js";
-//console.log(tempChartService.getChartData());
 import { ref, child, get } from "firebase/database";
-import firebaseApp from "@/firebaseApp";
+import firebaseApp from "./firebaseApp";
 
 const dbRef = ref(firebaseApp);
 
 export default {
-  name: "TemparetureChart",
-  mounted() {
+  getChartData() {
     var valueArray;
     var humidity = [];
     var time = [];
@@ -66,11 +52,7 @@ export default {
       };
       console.log(value);
       console.log(tempChartData);
-      const ctx = document.getElementById("graphCanvas");
-      new Chart(ctx, tempChartData);
+      return tempChartData;
     });
   },
 };
-</script>
-
-<style></style>
