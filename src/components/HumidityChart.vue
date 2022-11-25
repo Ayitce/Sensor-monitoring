@@ -1,5 +1,4 @@
 <template>
-  <h1>Humidity Chart</h1>
   <div style="width: 1200px">
     <canvas id="graphCanvas" ref="domRef"></canvas>
   </div>
@@ -66,8 +65,8 @@ export default {
             {
               label: "humidity in test room",
               data: value.humidity,
-              backgroundColor: "rgba(71, 183,132,.5)",
-              borderColor: "#47b784",
+              backgroundColor: "#d48f70",
+              borderColor: "#b76a47",
               borderWidth: 3,
             },
           ],
@@ -82,9 +81,4 @@ export default {
 };
 </script>
 
-<style>
-#graphCanvas {
-  position: absolute;
-  margin: auto;
-}
-</style>
+<style></style>

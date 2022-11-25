@@ -1,5 +1,4 @@
 <template>
-  <h1>Lux Chart</h1>
   <div style="width: 1200px">
     <canvas id="graphCanvas" ref="domRef"></canvas>
   </div>
@@ -66,8 +65,8 @@ export default {
             {
               label: "lux in test room",
               data: value.lux,
-              backgroundColor: "rgba(71, 183,132,.5)",
-              borderColor: "#47b784",
+              backgroundColor: "#bb85d4",
+              borderColor: "#9447b7",
               borderWidth: 3,
             },
           ],
@@ -82,9 +81,4 @@ export default {
 };
 </script>
 
-<style>
-#graphCanvas {
-  position: absolute;
-  margin: auto;
-}
-</style>
+<style></style>

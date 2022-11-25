@@ -1,6 +1,5 @@
 <template>
   <div class="lux">
-    <h1></h1>
     <MainChart></MainChart>
   </div>
 </template>

@@ -1,5 +1,4 @@
 <template>
-  <h1>Tempareture Chart</h1>
   <div style="width: 1200px">
     <canvas id="graphCanvas" ref="domRef"></canvas>
   </div>
@@ -83,9 +82,4 @@ export default {
 };
 </script>
 
-<style>
-#graphCanvas {
-  position: absolute;
-  margin: auto;
-}
-</style>
+<style></style>
